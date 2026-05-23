@@ -84,9 +84,12 @@
     <div id="stats-container"></div>
   </div>
 
-  <!-- Three.js r160 dropped examples/js/. Load via importmap and expose
-       THREE + OrbitControls as globals so the existing component modules
-       (scene.js, body-model.js, …) keep working without an audit. -->
+  <!-- Three.js r160 dropped examples/js/ UMD builds. Load via importmap and
+       expose THREE + OrbitControls as a mutable global so the existing
+       component modules (scene.js, body-model.js, …) keep working without
+       a wider refactor. Note: `import * as THREE` returns a frozen Module
+       Namespace Object — spread it into a plain object before attaching
+       OrbitControls, otherwise the assignment silently no-ops. -->
   <script type="importmap">
   {
     "imports": {
@@ -95,26 +98,27 @@
     }
   }
   </script>
-  <script type="module">
-    import * as THREE from 'three';
-    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-    window.THREE = THREE;
-    THREE.OrbitControls = OrbitControls;
-  </script>
   <!-- Stats.js for performance monitoring -->
   <script src="https://unpkg.com/stats.js@0.17.0/build/stats.min.js"></script>
 
-  <!-- Application modules loaded as ES modules via importmap workaround -->
+  <!-- All app code lives in one module so global THREE is installed before
+       the component modules run. Two separate module scripts would race
+       since each is independently async-resolved. -->
   <script type="module">
-    // Import all modules
-    import { Scene } from './components/scene.js';
-    import { BodyModel, BodyModelManager } from './components/body-model.js';
-    import { SignalVisualization } from './components/signal-viz.js';
-    import { Environment } from './components/environment.js';
-    import { DashboardHUD } from './components/dashboard-hud.js';
-    import { WebSocketClient } from './services/websocket-client.js';
-    import { DataProcessor } from './services/data-processor.js';
-    import { buildSensingWsUrl } from './services/sensing.service.js';
+    import * as ThreeNS from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    const THREE = { ...ThreeNS, OrbitControls };
+    window.THREE = THREE;
+
+    // Component modules use `THREE.*` as a global — must be installed first.
+    const { Scene } = await import('./components/scene.js');
+    const { BodyModel, BodyModelManager } = await import('./components/body-model.js');
+    const { SignalVisualization } = await import('./components/signal-viz.js');
+    const { Environment } = await import('./components/environment.js');
+    const { DashboardHUD } = await import('./components/dashboard-hud.js');
+    const { WebSocketClient } = await import('./services/websocket-client.js');
+    const { DataProcessor } = await import('./services/data-processor.js');
+    const { buildSensingWsUrl } = await import('./services/sensing.service.js');
 
     // -- Application State --
     const state = {
