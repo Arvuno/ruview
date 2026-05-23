@@ -307,7 +307,7 @@ Each module is a small signed binary (~400 KB) that runs alongside the WiFi-Dens
 | `sparse-recovery` | Recovers missing signal data from partial readings | 16 KB | Hard |
 | `temporal-compress` | Shrinks old data to save memory without losing meaning | 14 KB | Med |
 
-### 🌐 Network &mdash; <sub>1 modules</sub>
+### 🌐 Network &mdash; <sub>1 module</sub>
 
 | ID | What it does | Size | Difficulty |
 |----|--------------|-----:|:----------:|
