@@ -76,8 +76,8 @@ RuView turns ordinary WiFi into a contactless sensor. A $9 ESP32 board reads the
 
 ```bash
 # Option 1: Docker (simulated data, no hardware needed)
-docker pull ruvnet/wifi-densepose:latest
-docker run -p 3000:3000 ruvnet/wifi-densepose:latest
+docker pull ruvnet/wifi-densepose:latest   # may take a minute
+docker run -p 3000:3000 ruvnet/wifi-densepose:latest   # use -it for interactive; if port 3000 is taken, try -p 3001:3000
 # Open http://localhost:3000
 
 # Option 2: Live sensing with ESP32-S3 hardware ($9)
@@ -589,3 +589,11 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 **WiFi DensePose** — Privacy-preserving human pose estimation through WiFi signals.
+
+## Windows Note
+
+If running on Windows with Docker Desktop, pass CLI arguments differently:
+```
+docker run -p 3000:3000 ruvnet/wifi-densepose:latest -- --help
+```
+On Windows, use `--` to pass arguments through the Docker container to the binary inside.
