@@ -82,10 +82,10 @@ docker run -p 3000:3000 ruvnet/wifi-densepose:latest   # use -it for interactive
 
 # Option 2: Live sensing with ESP32-S3 hardware ($9)
 # Flash firmware, provision WiFi, and start sensing:
-python -m esptool --chip esp32s3 --port COM9 --baud 460800 \
+python -m esptool --chip esp32s3 --port /dev/ttyUSB0 --baud 460800 \
   write_flash 0x0 bootloader.bin 0x8000 partition-table.bin \
   0xf000 ota_data_initial.bin 0x20000 esp32-csi-node.bin
-python firmware/esp32-csi-node/provision.py --port COM9 \
+python firmware/esp32-csi-node/provision.py --port /dev/ttyUSB0 \
   --ssid "YourWiFi" --password "secret" --target-ip 192.168.1.20
 
 # Option 3: Full system with Cognitum Seed ($140)
