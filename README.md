@@ -72,7 +72,7 @@ RuView turns ordinary WiFi into a contactless sensor. A $9 ESP32 board reads the
 >
 > Browse the full 105-module catalog (with practical descriptions, sizes, and difficulty) below in [🧩 Edge Module Catalog](#-edge-module-catalog), or visit [seed.cognitum.one/store](https://seed.cognitum.one/store).
 >
-> 🤗 **Pretrained weights**: download from [`ruvnet/wifi-densepose-pretrained`](https://huggingface.co/ruvnet/wifi-densepose-pretrained) — see [Loading the pretrained model](#loading-the-pretrained-model) below for one-command setup.
+> 🤗 **Pretrained weights**: download from [`ruvnet/wifi-densepose-pretrained`](https://huggingface.co/ruvnet/wifi-densepose-pretrained) — see [Quick Start](#-quick-start) for one-command setup.
 
 ```bash
 # Option 1: Docker (simulated data, no hardware needed)
