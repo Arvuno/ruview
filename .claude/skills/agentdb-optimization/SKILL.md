@@ -288,7 +288,7 @@ console.log('Optimizations:', result.optimizations);
 ### Manual Optimization
 
 ```typescript
-// Manually trigger optimization
+// Mannually trigger optimization
 await adapter.optimize();
 
 // Get statistics

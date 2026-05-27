@@ -213,7 +213,7 @@ Furthermore, the `TokenBlacklist` is not consulted in the `AuthMiddleware.dispat
 **File:** `firmware/esp32-csi-node/main/ota_update.c:44-49`
 
 **Description:**
-The OTA firmware update endpoint (`POST /ota` on port 8032) has authentication disabled unless an OTA pre-shared key (PSK) is manually provisioned into NVS. The `ota_check_auth` function returns `true` when no PSK is configured, allowing unauthenticated firmware uploads.
+The OTA firmware update endpoint (`POST /ota` on port 8032) has authentication disabled unless an OTA pre-shared key (PSK) is mannually provisioned into NVS. The `ota_check_auth` function returns `true` when no PSK is configured, allowing unauthenticated firmware uploads.
 
 ```c
 // firmware/esp32-csi-node/main/ota_update.c:44-49

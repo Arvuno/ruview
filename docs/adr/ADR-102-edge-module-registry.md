@@ -14,7 +14,7 @@ https://storage.googleapis.com/cognitum-apps/app-registry.json
 
 As of v2.1.0 (2026-05-13) the registry advertises **105 cogs across 11 categories** (health, security, building, retail, industrial, research, ai, swarm, signal, network, developer). Each entry carries `id`, `name`, `category`, `version`, `description`, `size_kb`, `difficulty`, `sha256`, `binary_size`, and a `config[]` schema describing the runtime parameters the appliance offers when installing the cog.
 
-RuView today has no live awareness of this catalog. The `README.md` capability table is hand-curated; the UI surfaces only the capabilities the dashboard's HTML knows about; nothing in `wifi-densepose-sensing-server` references the registry. Result: when Cognitum ships a new cog (the registry was last updated 6 days ago — a fast cadence), RuView stays unaware until someone manually edits the README. Customers running the RuView dashboard against a real appliance see a 10-capability bag in the UI while the appliance is actually capable of installing 105 cogs.
+RuView today has no live awareness of this catalog. The `README.md` capability table is hand-curated; the UI surfaces only the capabilities the dashboard's HTML knows about; nothing in `wifi-densepose-sensing-server` references the registry. Result: when Cognitum ships a new cog (the registry was last updated 6 days ago — a fast cadence), RuView stays unaware until someone mannually edits the README. Customers running the RuView dashboard against a real appliance see a 10-capability bag in the UI while the appliance is actually capable of installing 105 cogs.
 
 Today's `cog-pose-estimation@0.0.1` release (PRs #642 / #643, ADR-100, ADR-101) is the first cog this repo ships to that registry. We need the discovery side to match.
 

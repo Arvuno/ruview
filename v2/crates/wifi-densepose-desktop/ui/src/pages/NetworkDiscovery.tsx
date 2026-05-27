@@ -130,7 +130,7 @@ const NetworkDiscovery: React.FC<NetworkDiscoveryProps> = ({ onNavigate }) => {
         uptime_secs: null,
         capabilities: null,
         friendly_name: null,
-        notes: "Manually added",
+        notes: "Mannually added",
       };
       setNodes((prev) => [...prev.filter((n) => n.ip !== newNode.ip), newNode]);
       setManualIp("");
@@ -550,7 +550,7 @@ const NetworkDiscovery: React.FC<NetworkDiscoveryProps> = ({ onNavigate }) => {
       {activeTab === "manual" && (
         <div className="card" style={{ maxWidth: 500 }}>
           <h3 className="heading-sm" style={{ marginBottom: "var(--space-4)" }}>
-            Add Node Manually
+            Add Node Mannually
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
             <div>

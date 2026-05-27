@@ -116,7 +116,7 @@ Replace the logistic regression adaptive classifier in the sensing server with a
 ### Positive
 - **Phase 1:** Free 10-30% performance gain in subcarrier partitioning. Security fixes (unsafe indexing, WASM panic). Zero API changes required.
 - **Phase 2:** More robust multi-node coherence detection. Helps with the "flickering persons" issue (#292) by providing a second opinion on signal quality.
-- **Phase 3:** Fundamentally improves the adaptive learning pipeline. Users no longer need to manually record labeled data — the system learns from ongoing use.
+- **Phase 3:** Fundamentally improves the adaptive learning pipeline. Users no longer need to mannually record labeled data — the system learns from ongoing use.
 - **Phase 4:** Path toward real ML-based detection instead of heuristic thresholds.
 
 ### Negative

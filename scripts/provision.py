@@ -249,7 +249,7 @@ def main():
         nvs_bin = generate_nvs_binary(csv_content, NVS_PARTITION_SIZE)
     except Exception as e:
         print(f"\nError generating NVS binary: {e}", file=sys.stderr)
-        print("\nFallback: save CSV and flash manually with ESP-IDF tools.", file=sys.stderr)
+        print("\nFallback: save CSV and flash mannually with ESP-IDF tools.", file=sys.stderr)
         fallback_path = "nvs_config.csv"
         with open(fallback_path, "w") as f:
             f.write(csv_content)
@@ -264,7 +264,7 @@ def main():
         with open(out, "wb") as f:
             f.write(nvs_bin)
         print(f"NVS binary saved to {out} ({len(nvs_bin)} bytes)")
-        print(f"Flash manually: python -m esptool --chip esp32s3 --port {args.port} "
+        print(f"Flash mannually: python -m esptool --chip esp32s3 --port {args.port} "
               f"write_flash 0x9000 {out}")
         return
 

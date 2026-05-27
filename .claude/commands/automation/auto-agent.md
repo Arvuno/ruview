@@ -117,6 +117,6 @@ mcp__claude-flow__auto_agent {
 ## See Also
 
 - `agent spawn` - Manual agent creation
-- `swarm init` - Initialize swarm manually
+- `swarm init` - Initialize swarm mannually
 - `smart spawn` - Intelligent agent spawning
 - `workflow select` - Choose predefined workflows

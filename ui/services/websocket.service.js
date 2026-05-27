@@ -88,7 +88,7 @@ export class WebSocketService {
 
       // The WebSocket is already open at this point (createWebSocketWithTimeout
       // resolved on the original onopen).  setupEventHandlers replaced onopen, so
-      // the new handler never fires.  Manually trigger the connected path now.
+      // the new handler never fires.  Mannually trigger the connected path now.
       if (ws.readyState === WebSocket.OPEN) {
         connectionData.status = 'connected';
         connectionData.lastActivity = Date.now();

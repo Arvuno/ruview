@@ -108,7 +108,7 @@ export const SettingsScreen = () => {
   const handleOpenGitHub = async () => {
     const handled = await Linking.canOpenURL('https://github.com');
     if (!handled) {
-      Alert.alert('Unable to open link', 'Please open https://github.com manually in your browser.');
+      Alert.alert('Unable to open link', 'Please open https://github.com mannually in your browser.');
       return;
     }
 

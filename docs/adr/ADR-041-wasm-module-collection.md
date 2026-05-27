@@ -2448,7 +2448,7 @@ sha256 = "def456..."
 
 6. **Vendor dependency management**: Vendor-integrated modules depend on
    code in `vendor/`. Changes to vendor source require rebuilding
-   affected WASM modules. Vendor updates must be manually pulled and
+   affected WASM modules. Vendor updates must be mannually pulled and
    tested. The `VENDOR_SOURCE.md` file in each module directory
    documents the exact crate, file, and commit used.
 

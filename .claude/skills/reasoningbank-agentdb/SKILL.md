@@ -426,7 +426,7 @@ const result = await rb.retrieveWithReasoning(embedding, {
   optimizeMemory: true,  // Consolidates similar patterns
 });
 
-// Or manually optimize
+// Or mannually optimize
 await rb.optimize();
 ```
 
