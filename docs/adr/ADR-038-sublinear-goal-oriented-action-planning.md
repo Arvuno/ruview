@@ -22,7 +22,7 @@ A single developer (or a small team aided by AI agents) must decide **what to bu
 - **Shifting goals**: One session the user wants accuracy improvement; the next session they want multi-person support; the next they want WebAssembly deployment.
 - **Resource constraints**: Limited compute budget, single-developer throughput, CI pipeline capacity.
 
-Manually navigating this decision space is error-prone. The developer must hold the full dependency graph in working memory, re-evaluate priorities when goals shift, and avoid dead-end plans that block on unavailable hardware.
+Mannually navigating this decision space is error-prone. The developer must hold the full dependency graph in working memory, re-evaluate priorities when goals shift, and avoid dead-end plans that block on unavailable hardware.
 
 ### 1.2 Why GOAP
 

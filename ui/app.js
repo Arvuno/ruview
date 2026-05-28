@@ -320,7 +320,7 @@ class WiFiDensePoseApp {
         break;
         
       case 'demo':
-        // Demo starts manually
+        // Demo starts mannually
         break;
 
       case 'sensing':

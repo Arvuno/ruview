@@ -15,7 +15,7 @@ The MAT crate's `Survivor` entity has `SurvivorStatus` states
 (`Active / Rescued / Lost / Deceased / FalsePositive`) and `is_stale()` /
 `mark_lost()` methods, but these are insufficient for real operational use:
 
-1. **Manually driven state transitions** — no controller automatically fires
+1. **Mannually driven state transitions** — no controller automatically fires
    `mark_lost()` when signal drops for N consecutive frames, nor re-activates
    a survivor when signal reappears.
 
@@ -171,7 +171,7 @@ tracking/
 ### Risk Mitigation
 
 - **Conservative re-ID**: threshold 0.35 (not 0.5) — prefer new survivor record
-  over incorrect merge. Operators can manually merge via the API if needed.
+  over incorrect merge. Operators can mannually merge via the API if needed.
 - **Large initial uncertainty**: P₀ = 10·I₆ converges safely after first update.
 - **`Terminated` is unrecoverable**: prevents runaway re-linking.
 - All thresholds exposed in `TrackerConfig` for operational tuning.

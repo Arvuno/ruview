@@ -414,7 +414,7 @@ class HardwareService:
         self.logger.info("Hardware service reset")
     
     async def trigger_manual_collection(self, router_id: Optional[str] = None) -> Dict[str, Any]:
-        """Manually trigger data collection."""
+        """Mannually trigger data collection."""
         if not self.is_running:
             raise RuntimeError("Hardware service is not running")
         

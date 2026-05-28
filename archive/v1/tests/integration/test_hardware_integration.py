@@ -401,7 +401,7 @@ class TestCSIDataCollection:
         # This will fail initially
         assert frame is None
         
-        # Enable CSI streaming (manually for testing)
+        # Enable CSI streaming (mannually for testing)
         router.csi_streaming = True
         frame = await csi_collector.collect_frame(router)
         

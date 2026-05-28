@@ -94,7 +94,7 @@ def ensure_model(cache_dir: Path) -> Path:
     except Exception as exc:
         print(f"ERROR: Failed to download model: {exc}", file=sys.stderr)
         print(
-            "Download manually from:\n"
+            "Download mannually from:\n"
             f"  {MODEL_URL}\n"
             f"and place at {model_path}",
             file=sys.stderr,

@@ -666,7 +666,7 @@ CREATE TABLE nodes (
 
 - On discovery broadcast, upsert into registry (update `last_ip`, `last_seen`, `firmware`)
 - Dashboard shows **all registered nodes**, dimming those not seen recently
-- User can manually add nodes by MAC/IP (for networks without mDNS)
+- User can mannually add nodes by MAC/IP (for networks without mDNS)
 - Export/import registry as JSON for fleet management across machines
 - Node health history (uptime, last OTA, error count) tracked over time
 

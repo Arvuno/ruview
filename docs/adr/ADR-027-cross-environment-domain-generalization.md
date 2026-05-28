@@ -51,7 +51,7 @@ Five concurrent lines of research have converged on the domain generalization pr
 | Current Capability | Gap | MERIDIAN Addition |
 |-------------------|-----|------------------|
 | AETHER embeddings (ADR-024) | Embeddings encode environment identity -- useful for fingerprinting but harmful for cross-environment transfer | Environment-disentangled embeddings with explicit factorization |
-| SONA LoRA adapters (ADR-005) | Adapters must be manually created per environment; no mechanism to generate them from few-shot data | Zero-shot environment adaptation via geometry-conditioned inference |
+| SONA LoRA adapters (ADR-005) | Adapters must be mannually created per environment; no mechanism to generate them from few-shot data | Zero-shot environment adaptation via geometry-conditioned inference |
 | MM-Fi/Wi-Pose training (ADR-015) | Single-environment train/eval; no cross-domain protocol | Multi-domain training protocol with environment augmentation |
 | SpotFi phase correction (ADR-014) | Hardware-specific phase calibration | Hardware-invariant CSI normalization layer |
 | RuVector attention (ADR-016) | Attention weights learn environment-specific patterns | Domain-adversarial attention regularization |
@@ -486,7 +486,7 @@ ADRs 002-011 were proposed during the initial architecture phase. MERIDIAN direc
 | Proposed ADR | Gap | How MERIDIAN Closes It |
 |-------------|-----|----------------------|
 | **ADR-004**: HNSW Vector Search Fingerprinting | CSI fingerprints are environment-specific — a fingerprint learned in Room A is useless in Room B | MERIDIAN's `DomainFactorizer` produces **environment-disentangled embeddings** (`h_pose`). When fed into ADR-024's `FingerprintIndex`, these embeddings match across rooms because environment information has been factored out. The `h_env` path captures room identity separately, enabling both cross-room matching AND room identification in a single model. |
-| **ADR-005**: SONA Self-Learning for Pose Estimation | SONA LoRA adapters must be manually created per environment with labeled data | MERIDIAN Phase 5 (`RapidAdaptation`) extends SONA with **unsupervised adapter generation**: 10 seconds of unlabeled WiFi data + contrastive test-time training automatically produces a per-room LoRA adapter. No labels, no manual intervention. The existing `SonaProfile` in `sona.rs` gains a `meridian_calibration` field for storing adaptation state. |
+| **ADR-005**: SONA Self-Learning for Pose Estimation | SONA LoRA adapters must be mannually created per environment with labeled data | MERIDIAN Phase 5 (`RapidAdaptation`) extends SONA with **unsupervised adapter generation**: 10 seconds of unlabeled WiFi data + contrastive test-time training automatically produces a per-room LoRA adapter. No labels, no manual intervention. The existing `SonaProfile` in `sona.rs` gains a `meridian_calibration` field for storing adaptation state. |
 | **ADR-006**: GNN-Enhanced CSI Pattern Recognition | GNN treats each environment's patterns independently; no cross-environment transfer | MERIDIAN's domain-adversarial training regularizes the GCN layers (ADR-023's `GnnStack`) to learn **structure-preserving, environment-invariant** graph features. The gradient reversal layer forces the GCN to shed room-specific multipath patterns while retaining body-pose-relevant spatial relationships between keypoints. |
 
 ### 6.2 Superseded (Already Implemented)

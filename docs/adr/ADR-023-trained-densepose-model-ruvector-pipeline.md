@@ -363,7 +363,7 @@ After offline training produces a base model, SONA enables continuous adaptation
 │  Adaptation triggers:                                    │
 │  • First deployment in new room                          │
 │  • PCK drops below threshold (drift detection)           │
-│  • User manually initiates calibration                   │
+│  • User mannually initiates calibration                   │
 │  • Furniture/layout change detected (CSI baseline shift) │
 │                                                          │
 │  Adaptation data:                                        │

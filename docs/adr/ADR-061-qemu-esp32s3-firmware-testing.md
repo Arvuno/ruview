@@ -757,7 +757,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 | `boundary-max` | target_port=65535, node_id=255, top_k=32, vital_win=256 | Max-range values |
 | `boundary-min` | target_port=1, node_id=0, top_k=1, vital_win=32 | Min-range values |
 | `power-save` | power_duty=10, edge_tier=0 | Low-power mode |
-| `corrupt-nvs` | (manually crafted partial/corrupt partition) | Graceful fallback to defaults |
+| `corrupt-nvs` | (mannually crafted partial/corrupt partition) | Graceful fallback to defaults |
 
 ### Automated Matrix Generation
 

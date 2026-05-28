@@ -34,7 +34,7 @@ There is no way to read the current NVS configuration from a device. Field opera
 
 ### Gap 3: No Verification
 
-After flashing, there is no automated check that the device booted successfully with the new configuration. Operators must manually run a serial monitor and inspect logs.
+After flashing, there is no automated check that the device booted successfully with the new configuration. Operators must mannually run a serial monitor and inspect logs.
 
 ### Gap 4: No Config File Support
 

@@ -183,7 +183,7 @@ This ADR is **Implemented** when all of the following hold:
    procedural scene with badge `● DEMO Synthetic`.
 3. Existing demos at `https://ruvnet.github.io/RuView/` and
    `…/pose-fusion.html` and `…/nvsim/` are still reachable after the
-   first deploy (smoke-tested manually).
+   first deploy (smoke-tested mannually).
 4. `https://ruvnet.github.io/RuView/pointcloud/?live=1` shows the
    `● OFFLINE` panel (because no same-origin backend exists on Pages).
 5. `https://ruvnet.github.io/RuView/pointcloud/?backend=https://example.invalid`

@@ -152,7 +152,7 @@ Alternatively, for maximum spectral diversity, a wider SNN (384 input neurons fo
 |--------|--------|--------|
 | SNN step latency | <0.1ms | 128-64-8 network, ~8,700 synapses |
 | STDP convergence | <30 seconds | ~360 frames at 12 fps, patterns stabilize |
-| Output accuracy (after adaptation) | >80% | Compared to manually labeled ground truth |
+| Output accuracy (after adaptation) | >80% | Compared to mannually labeled ground truth |
 | Memory footprint | <50 KB | Weights + neuron state |
 | Idle room spike rate | <10 spikes/frame | Event-driven: near-zero compute when nothing moves |
 | Adaptation to new environment | <2 minutes | STDP relearns subcarrier correlations |

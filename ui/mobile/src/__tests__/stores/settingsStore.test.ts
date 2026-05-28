@@ -2,7 +2,7 @@ import { useSettingsStore } from '@/stores/settingsStore';
 
 describe('useSettingsStore', () => {
   beforeEach(() => {
-    // Reset to defaults by manually setting all values
+    // Reset to defaults by mannually setting all values
     useSettingsStore.setState({
       serverUrl: 'http://localhost:3000',
       rssiScanEnabled: false,

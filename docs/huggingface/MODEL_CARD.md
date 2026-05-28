@@ -38,7 +38,7 @@ This model turns ordinary WiFi signals into a human sensing system. It can detec
 
 **How does it work?** Every WiFi router constantly sends signals that bounce off walls, furniture, and people. When a person moves -- or even just breathes -- those bouncing signals change in tiny but measurable ways. WiFi chips can capture these changes as numbers called *Channel State Information* (CSI). Think of it like ripples in a pond: drop a stone and the ripples tell you something happened, even if you cannot see the stone.
 
-This model learned to read those "WiFi ripples" and figure out what is happening in the room. It was trained using a technique called *contrastive learning*, which means it taught itself by comparing thousands of WiFi signal snapshots -- no human had to manually label anything.
+This model learned to read those "WiFi ripples" and figure out what is happening in the room. It was trained using a technique called *contrastive learning*, which means it taught itself by comparing thousands of WiFi signal snapshots -- no human had to mannually label anything.
 
 The result is a small, fast model that runs on a $9 microcontroller and preserves complete privacy because it never captures images or audio.
 
