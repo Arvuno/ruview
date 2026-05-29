@@ -597,3 +597,5 @@ If running on Windows with Docker Desktop, pass CLI arguments differently:
 docker run -p 3000:3000 ruvnet/wifi-densepose:latest -- --help
 ```
 On Windows, use `--` to pass arguments through the Docker container to the binary inside.
+
+- Documentation updated for clarity
